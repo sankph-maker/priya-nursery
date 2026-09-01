@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            var div = document.createElement('div');
+            div.style.position = 'fixed';
+            div.style.top = '0';
+            div.style.left = '0';
+            div.style.width = '100%';
+            div.style.backgroundColor = 'red';
+            div.style.color = 'white';
+            div.style.padding = '15px';
+            div.style.zIndex = '999999';
+            div.style.fontSize = '14px';
+            div.style.fontFamily = 'monospace';
+            div.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
+            div.innerHTML = '<strong>JavaScript Error detected:</strong><br>' + message + '<br>File: ' + source + '<br>Line: ' + lineno + ' | Column: ' + colno;
+            document.body.appendChild(div);
+            return false;
+        };
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Priya Nursery in Gimhavane, Dapoli, Maharashtra. Certified by NHB & Government of Maharashtra. Premium Alphonso mango saplings, spices, ornamental & medicinal plants since 1987.">
@@ -26,12 +45,35 @@
 </head>
 <body>
 
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <div class="announcement-left">
+                <span class="announcement-badge">🌿 NHB & Govt. Certified</span>
+                <span class="announcement-text">Authentic Konkan Grafts & Saplings • Shipped Across Maharashtra</span>
+            </div>
+            <div class="announcement-right">
+                <span class="timing-badge">🕒 Open All Days 8:00 AM – 6:00 PM</span>
+                <a href="https://wa.me/917498486833?text=Hi%20Priya%20Nursery,%20I%20would%20like%20to%20inquire%20about%20plant%20saplings." target="_blank" class="announcement-wa-link">
+                    <svg class="icon-small" viewBox="0 0 24 24" style="margin-right: 4px; vertical-align: middle;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.217 8.217 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.45 0-2.88-.38-4.13-1.11l-.3-.18-3.07.81.82-2.99-.2-.32a8.213 8.213 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24L12.05 3.67z" fill="currentColor"/></svg>
+                    <span>WhatsApp: +91 7498486833</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header / Navigation -->
     <header id="main-header" class="header-glass">
         <div class="container nav-container">
-            <a href="#" class="logo-link" id="nav-logo">
-                <img src="assets/logo.jpg" alt="Priya Nursery Logo" class="nav-logo-img">
-                <span class="brand-name">Priya Nursery</span>
+            <a href="#" class="logo-link" id="nav-logo" aria-label="Priya Nursery Home">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.jpg" alt="Priya Nursery Logo" class="nav-logo-img">
+                    <span class="logo-verified-badge" title="NHB & Maharashtra Govt. Certified">✓</span>
+                </div>
+                <div class="brand-text-block">
+                    <span class="brand-name">Priya Nursery</span>
+                    <span class="brand-sub">ESTD 1987 • DAPOLI, KONKAN</span>
+                </div>
             </a>
             
             <nav class="nav-menu" id="nav-menu-list">
@@ -67,13 +109,36 @@
                 <div class="hero-content">
                     <div class="badge-certified animate-fade-in">
                         <svg class="icon-small" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
-                        <span>NHB & Govt. Certified Nursery</span>
+                        <span>NHB & Maharashtra Govt. Certified Nursery</span>
                     </div>
                     <h1 class="hero-title animate-slide-up">Nurturing Nature's Finest Flora Since 1987</h1>
                     <p class="hero-subtitle animate-slide-up-delay">Explore Ratnagiri's trusted destination for certified Alphonso mango grafts, exotic spices, vibrant ornamentals, and native forest saplings. Grown locally in Dapoli, shipped with care.</p>
                     <div class="hero-cta animate-slide-up-delay-more">
                         <a href="#collections" class="btn btn-primary btn-large" id="btn-hero-explore">Explore Our Plants</a>
                         <a href="#plant-finder" class="btn btn-outline btn-large" id="btn-hero-quiz">Find Your Perfect Plant</a>
+                    </div>
+                    
+                    <!-- Hero Metrics / Trust Strip -->
+                    <div class="hero-metrics-strip animate-slide-up-delay-more">
+                        <div class="metric-item">
+                            <span class="metric-val">35+</span>
+                            <span class="metric-lbl">Years of Legacy</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-val">NHB</span>
+                            <span class="metric-lbl">Govt. Certified</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-val">100%</span>
+                            <span class="metric-lbl">Genuine Mother Grafts</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-val">50k+</span>
+                            <span class="metric-lbl">Happy Saplings Planted</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,44 +299,73 @@
         <section id="catalog" class="catalog-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Search Our Plant Catalog</h2>
-                    <p class="section-desc">Browse our complete nursery inventory. Filter by category, search by name or variety, and inquire directly on WhatsApp.</p>
+                    <h2 class="section-title">Explore Our Plant Catalog</h2>
+                    <p class="section-desc">Browse our premium selection of certified grafts, ornamental varieties, and medicinal herbs. Select a category below to see our plants.</p>
                 </div>
 
-                <!-- Catalog Controls: Search and Filters -->
-                <div class="catalog-controls">
-                    <div class="search-box-wrapper">
-                        <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/></svg>
-                        <input type="text" id="catalog-search" placeholder="Search plants by name, variety, or details... (e.g., Mango, Areca, Mogra)">
-                    </div>
-
-                    <div class="filters-container" id="catalog-filters">
-                        <button class="filter-btn active" data-filter="all">All Plants</button>
-                        <button class="filter-btn" data-filter="fruits">Fruit Plants</button>
-                        <button class="filter-btn" data-filter="spices">Spice Plants</button>
-                        <button class="filter-btn" data-filter="palms">Palms</button>
-                        <button class="filter-btn" data-filter="flowering">Flowering Plants</button>
-                        <button class="filter-btn" data-filter="indoor">Indoor Plants</button>
-                        <button class="filter-btn" data-filter="hedge">Edge & Hedge</button>
-                        <button class="filter-btn" data-filter="creepers">Creepers</button>
-                        <button class="filter-btn" data-filter="avenue">Avenue Trees</button>
-                        <button class="filter-btn" data-filter="medicinal">Medicinal Plants</button>
-                    </div>
-                </div>
-
-                <!-- Plant Grid -->
-                <div class="catalog-grid" id="catalog-grid">
-                    <!-- Dynamic Javascript Cards go here -->
-                </div>
-
-                <!-- No Results State -->
-                <div class="no-results hidden" id="catalog-no-results">
-                    <svg class="no-results-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/></svg>
-                    <h4>No Plants Found</h4>
-                    <p>We couldn't find any plants matching your search terms or filters. Try searching for another name or variety, or contact us directly on WhatsApp!</p>
+                <!-- Categories Grid on Homepage -->
+                <div class="category-sections-wrapper" id="category-sections-wrapper">
+                    <!-- Dynamic Javascript will inject category sections here -->
                 </div>
             </div>
         </section>
+
+        <!-- Category Detail View (Full Page Section) - Hidden by default -->
+        <section id="category-detail-view" class="category-detail-section hidden">
+            <div class="container">
+                <div class="category-detail-header">
+                    <button id="btn-back-to-categories" class="btn-back">
+                        <svg class="icon-small" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
+                        Back to Categories
+                    </button>
+                    <h2 id="category-detail-title" class="section-title">Category Title</h2>
+                    <p id="category-detail-desc" class="section-desc">Category Description goes here.</p>
+                </div>
+                <div class="catalog-grid" id="category-detail-grid">
+                    <!-- Dynamic all-plants-in-category cards go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant Details Modal - Hidden by default -->
+        <div id="plant-details-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <button id="btn-close-modal" class="modal-close-btn" aria-label="Close details">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+                </button>
+                <div class="modal-body">
+                    <div class="modal-image-pane">
+                        <img id="modal-plant-img" src="" alt="Plant Image">
+                    </div>
+                    <div class="modal-info-pane">
+                        <span id="modal-plant-category" class="plant-category-badge">Category</span>
+                        <h2 id="modal-plant-name">Plant Name</h2>
+                        <em id="modal-plant-scientific" class="plant-scientific">Scientific Name</em>
+                        <p id="modal-plant-desc" class="plant-description">Plant Description</p>
+                        
+                        <div class="modal-specs-section">
+                            <h4>Specifications</h4>
+                            <div class="specs-grid" id="modal-specs-grid">
+                                <!-- Dynamic specs: Sun, Water, Soil, Growth -->
+                            </div>
+                        </div>
+
+                        <div class="modal-care-section">
+                            <h4>Care & Maintenance</h4>
+                            <p id="modal-plant-care">Care instructions go here...</p>
+                        </div>
+
+                        <div class="modal-actions">
+                            <a id="modal-whatsapp-btn" href="#" target="_blank" class="btn btn-primary btn-inquire-large">
+                                <svg class="icon-small" viewBox="0 0 24 24" style="margin-right: 8px; vertical-align: middle;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/></svg>
+                                Inquire on WhatsApp
+                            </a>
+                            <button id="modal-back-btn" class="btn btn-outline">Back to Catalog</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Real Nursery Gallery Section -->
         <section id="gallery" class="gallery-section">
@@ -712,13 +806,19 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div class="logo-link">
-                    <img src="assets/logo.jpg" alt="Priya Nursery Logo" class="footer-logo-img">
-                    <span class="brand-name">Priya Nursery</span>
+                    <div class="logo-wrapper">
+                        <img src="assets/logo.jpg" alt="Priya Nursery Logo" class="footer-logo-img">
+                        <span class="logo-verified-badge" title="NHB & Maharashtra Govt. Certified">✓</span>
+                    </div>
+                    <div class="brand-text-block">
+                        <span class="brand-name">Priya Nursery</span>
+                        <span class="brand-sub">ESTD 1987 • DAPOLI, KONKAN</span>
+                    </div>
                 </div>
-                <p class="brand-desc">Certified green excellence since 1987 in Gimhavane, Dapoli. Owner: Vijay Ramchandra Gaurat. <br>Email: <a href="mailto:priyanursery87@gmail.com" style="color:var(--color-gold); text-decoration:underline;">priyanursery87@gmail.com</a><br>Follow us on Instagram: <a href="https://instagram.com/priya_nursery87" target="_blank" style="color:var(--color-gold); font-weight:600;">@priya_nursery87</a></p>
+                <p class="brand-desc">Certified green excellence since 1987 in Gimhavane, Dapoli. Proprieter: <strong>Vijay Ramchandra Gaurat</strong>.<br>Email: <a href="mailto:priyanursery87@gmail.com" style="color:var(--color-gold); text-decoration:underline;">priyanursery87@gmail.com</a><br>Instagram: <a href="https://instagram.com/priya_nursery87" target="_blank" style="color:var(--color-gold); font-weight:600;">@priya_nursery87</a></p>
                 <div class="certifications-pills">
-                    <span class="cert-pill">NHB Certified</span>
-                    <span class="cert-pill">Maharashtra Govt. Registered</span>
+                    <span class="cert-pill">🌿 NHB Certified</span>
+                    <span class="cert-pill">🏛️ Maharashtra Govt. Registered</span>
                 </div>
             </div>
             
