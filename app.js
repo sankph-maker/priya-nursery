@@ -287,8 +287,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Render matching plant in result UI
-        document.getElementById('result-plant-img').src = bestMatch.image;
-        document.getElementById('result-plant-img').alt = bestMatch.name;
+        const resImg = document.getElementById('result-plant-img');
+        resImg.src = bestMatch.image;
+        resImg.onerror = function() {
+            if (this.src.includes('assets/')) {
+                this.src = this.src.replace('assets/', '');
+            } else {
+                this.onerror = null;
+                this.src = 'real_nursery_1.jpg';
+            }
+        };
+        resImg.alt = bestMatch.name;
         document.getElementById('result-plant-category').textContent = bestMatch.category;
         document.getElementById('result-plant-name').textContent = bestMatch.name;
         document.getElementById('result-plant-desc').textContent = bestMatch.description;
@@ -2181,7 +2190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="plant-card-header">
                     <span class="plant-category-badge badge-${plant.category}">${label}</span>
                 </div>
-                <img src="${plant.image}" alt="${plant.name}" class="plant-card-img" loading="lazy" onerror="this.onerror=null; this.src='${fallbackSrc}';">
+                <img src="${plant.image}" alt="${plant.name}" class="plant-card-img" loading="lazy" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}else{this.onerror=null;this.src='${fallbackSrc}';}">
             </div>
             <div class="plant-card-body">
                 <h3>${plant.name}</h3>
@@ -2313,8 +2322,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         modalPlantImg.src = plant.image;
         modalPlantImg.onerror = function() {
-            this.onerror = null;
-            this.src = fallbackSrc;
+            if (this.src.includes('assets/')) {
+                this.src = this.src.replace('assets/', '');
+            } else {
+                this.onerror = null;
+                this.src = fallbackSrc;
+            }
         };
         modalPlantImg.alt = plant.name;
         
