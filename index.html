@@ -376,19 +376,19 @@
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item card-hover-effect">
-                        <img src="assets/real_nursery_1.jpg" alt="Real photo of Priya Nursery Dapoli Main Entrance" class="gallery-img">
+                        <img src="assets/real_nursery_1.jpg" alt="Real photo of Priya Nursery Dapoli Main Entrance" class="gallery-img" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}">
                     </div>
                     <div class="gallery-item card-hover-effect">
-                        <img src="assets/real_nursery_2.jpg" alt="Greenhouse Grafts and Saplings" class="gallery-img">
+                        <img src="assets/real_nursery_2.jpg" alt="Greenhouse Grafts and Saplings" class="gallery-img" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}">
                     </div>
                     <div class="gallery-item card-hover-effect">
-                        <img src="assets/real_nursery_3.jpg" alt="Rows of Potted Saplings" class="gallery-img">
+                        <img src="assets/real_nursery_3.jpg" alt="Rows of Potted Saplings" class="gallery-img" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}">
                     </div>
                     <div class="gallery-item card-hover-effect">
-                        <img src="assets/real_nursery_4.jpg" alt="Healthy Saplings in Nursery Beds" class="gallery-img">
+                        <img src="assets/real_nursery_4.jpg" alt="Healthy Saplings in Nursery Beds" class="gallery-img" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}">
                     </div>
                     <div class="gallery-item card-hover-effect">
-                        <img src="assets/real_nursery_5.jpg" alt="Plant Propagation Bed" class="gallery-img">
+                        <img src="assets/real_nursery_5.jpg" alt="Plant Propagation Bed" class="gallery-img" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}">
                     </div>
                 </div>
             </div>
@@ -400,7 +400,8 @@
                 <div class="tour-video-column">
                     <div class="video-responsive-wrapper">
                         <div class="video-responsive">
-                            <video controls preload="metadata" poster="assets/hero.jpg">
+                            <video controls preload="metadata" poster="hero.jpg" class="tour-video-player">
+                                <source src="nursery_tour.mp4" type="video/mp4">
                                 <source src="assets/nursery_tour.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -543,7 +544,7 @@
                         <div class="quiz-step" id="quiz-result">
                             <div class="result-layout">
                                 <div class="result-img-box">
-                                    <img src="assets/mango.jpg" alt="Recommended Plant" id="result-plant-img" class="result-img">
+                                    <img src="assets/mango.jpg" alt="Recommended Plant" id="result-plant-img" class="result-img" onerror="if(this.src.includes('assets/')){this.src=this.src.replace('assets/','');}">
                                 </div>
                                 <div class="result-info">
                                     <span class="result-tag" id="result-plant-category">Premium Sapling</span>

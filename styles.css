@@ -523,7 +523,7 @@ header.scrolled .hamburger-menu .bar {
     display: flex;
     align-items: center;
     padding: 6rem 0 7rem 0;
-    background-image: url('assets/real_nursery_1.jpg');
+    background-image: url('real_nursery_1.jpg'), url('assets/real_nursery_1.jpg');
     background-size: cover;
     background-position: center;
     color: var(--text-light);
